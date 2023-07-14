@@ -1,5 +1,5 @@
 #include <iostream>
-#include <Array.hpp>
+#include "Array.hpp"
 
 #define MAX_VAL 750
 int main(int, char**)
@@ -14,11 +14,12 @@ int main(int, char**)
         mirror[i] = value;
     }
     //SCOPE
+	std::cout << "===================================" << std::endl;
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
     }
-
+	std::cout << "===================================" << std::endl;
     for (int i = 0; i < MAX_VAL; i++)
     {
         if (mirror[i] != numbers[i])
@@ -31,7 +32,7 @@ int main(int, char**)
     {
         numbers[-2] = 0;
     }
-    catch(const std::exception& e)
+    catch(const Array<int>::outOfBounds &e)
     {
         std::cerr << e.what() << '\n';
     }
@@ -39,7 +40,7 @@ int main(int, char**)
     {
         numbers[MAX_VAL] = 0;
     }
-    catch(const std::exception& e)
+    catch(const Array<int>::outOfBounds &e)
     {
         std::cerr << e.what() << '\n';
     }
@@ -48,6 +49,6 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
-    delete [] mirror;//
+    delete [] mirror;
     return 0;
 }
