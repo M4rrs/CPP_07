@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 14:22:45 by nnorazma          #+#    #+#             */
-/*   Updated: 2023/07/14 14:22:46 by nnorazma         ###   ########.fr       */
+/*   Updated: 2023/07/21 12:48:59 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ template <typename T> void minus(T &t) {
 }
 
 template <typename T> void isodd(T t) {
-	std::cout << (!((int)t % 2) ? "even" : "odd") << std::endl;
+	std::cout << (((int)t % 2) ? "odd" : "even") << std::endl;
 }
 
 template <typename T> void iter( T arr[], int len, void(*f)(T &)) {
