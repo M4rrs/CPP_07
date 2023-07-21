@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 14:22:25 by nnorazma          #+#    #+#             */
-/*   Updated: 2023/07/14 14:22:27 by nnorazma         ###   ########.fr       */
+/*   Updated: 2023/07/21 12:51:44 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ template <typename T> class Array {
 		}
 
 		Array &operator=( const Array &assign ) {
-			// if (this->_arr)
-			// 	delete[] this->_arr;
 			if ((this->_size = assign.size())) {
 				this->_arr = new T[this->_size];
 				for (int i = 0; i < this->_size; i++)
