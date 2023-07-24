@@ -6,14 +6,14 @@
 #    By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/14 14:22:59 by nnorazma          #+#    #+#              #
-#    Updated: 2023/07/14 14:23:01 by nnorazma         ###   ########.fr        #
+#    Updated: 2023/07/24 15:48:47 by nnorazma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Templates
 
 CC = c++
-FLAGS = -Wall -Werror -Wextra -I -fsanitize=address
+FLAGS = -Wall -Werror -Wextra -I -std=c++98 -fsanitize=address
 
 RM = rm -rf
 

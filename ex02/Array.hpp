@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 14:22:25 by nnorazma          #+#    #+#             */
-/*   Updated: 2023/07/21 12:51:44 by nnorazma         ###   ########.fr       */
+/*   Updated: 2023/07/24 15:59:59 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ template <typename T> class Array {
 
 	public:
 		Array( void ) : _size(0) {
-			this->_arr = new T[0];
+			this->_arr = nullptr;
 			std::cout << "Default Array constructed. Size = 0" << std::endl;
 		}
 
@@ -51,7 +51,7 @@ template <typename T> class Array {
 		}
 
 		T &operator[]( int index ) {
-			if (index >= this->_size)
+			if (index >= this->_size || index < 0)
 				throw Array::outOfBounds();
 			return (this->_arr[index]);
 		}

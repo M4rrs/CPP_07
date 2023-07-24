@@ -6,14 +6,14 @@
 #    By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/14 14:22:32 by nnorazma          #+#    #+#              #
-#    Updated: 2023/07/14 14:22:34 by nnorazma         ###   ########.fr        #
+#    Updated: 2023/07/24 15:50:39 by nnorazma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Array
 
 CC = c++
-FLAGS = -Wall -Werror -Wextra -I -fsanitize=address
+FLAGS = -Wall -Werror -Wextra -I -std=c++98 -fsanitize=address
 
 RM = rm -rf
 
